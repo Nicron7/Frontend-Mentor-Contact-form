@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <section class="container">
+    <h2 class="form__title">Contact Us</h2>
+    <form action="" class="form" novalidate>
+      <div class="form__group">
+        <div class="form__flex">
+          <label for="name" class="form__label">First Name <span>*</span></label>
+          <input name="name" aria-describedby="nameError" autocomplete="on" id="name" class="form__input" type="text" required>
+          <p role="alert" aria-live="assertive" id="nameError" class="form__error">This field is required</p>
+        </div>
+        <div class="form__flex">
+          <label for="lastName" class="form__label">Last Name <span>*</span></label>
+          <input name="lastName" aria-describedby="lastNameError" autocomplete="on" id="lastName" class="form__input" type="text" required>
+          <p role="alert" aria-live="assertive" id="lastNameError" class="form__error">This field is required</p>
+        </div>
+      </div>
+      <div class="form__flex">
+        <label for="email" class="form__label">Email Address <span>*</span></label>
+        <input name="email" aria-describedby="emailError" autocomplete="on" id="email" class="form__input" type="email" required>
+        <p id="emailError" role="alert" aria-live="assertive" class="form__error"></p>
+      </div>     
+      <div class="form__flex">
+        <p class="form__label">Query Type <span>*</span></p>
+        <div class="form__group">
+          <label for="radioFirst" class="form__radio">
+            <input name="radio" aria-describedby="radioError" id="radioFirst" class="form__input" type="radio" required>
+            <span class="custom-radio"></span>
+            General Enquiry
+          </label>
+          <label for="radioSecond" class="form__radio">
+            <input name="radio" aria-describedby="radioError" id="radioSecond" class="form__input" type="radio">
+            <span class="custom-radio"></span>
+            Support Request
+          </label>
+        </div>
+        <p id="radioError" role="alert" aria-live="assertive" class="form__error">Please select a query type</p>
+      </div>
+      <div class="form__flex">
+        <label for="message" class="form__label">Message <span>*</span></label>
+        <textarea aria-describedby="messageError" name="message" id="message" class="form__input" rows="4" required></textarea>
+        <p id="messageError" role="alert" aria-live="assertive" class="form__error">This field is required</p>
+      </div>
+      <div class="form__flex gap-1">
+        <label class="form__checkbox form__label">
+          <input name="consent" aria-describedby="consentError" type="checkbox" id="consent" class="form__checkbox" required>
+          <span class="custom-checkbox"></span>
+          I consent to being contacted by the team <span>*</span>
+        </label>
+        <p id="consentError" role="alert" aria-live="assertive" class="form__error">To submit this form, please consent to being contacted</p>
+      </div>
+      <span class="loader"></span>
+      <button type="submit" class="form__button">Submit</button>
+    </form>
+  </section>
+
+
+  <section class="success__container">
+    <div role="status" aria-live="polite" class="success">
+      <h3 class="success__title"><img src="./assets/images/icon-success-check.svg" alt="">Message Sent!</h3>
+      <p class="success__text">Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+  </section>
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Nicron7" target="_blank">Nicron7</a>.</p>
+  </div>
+  <script src="script/app.js"></script>
+</body> 
+</html>
